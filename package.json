@@ -1,0 +1,29 @@
+{
+  "name": "int-cwiczenia",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start:express-1:cw1": "nodemon ./express-1/src/cw1.js",
+    "start:express-1:cw2": "nodemon ./express-1/src/cw2.js",
+    "start:express-1:cw3": "nodemon ./express-1/src/cw3.js",
+    "start:express-1:cw4": "nodemon ./express-1/src/cw4.js",
+
+    "start:http-1:cw1": "nodemon ./http-1/src/cw1.js",
+    "start:http-1:cw2": "nodemon ./http-1/src/cw2.js",
+    "start:http-1:cw3": "nodemon ./http-1/src/cw3.js",
+    "start:http-1:cw4": "nodemon ./http-1/src/cw4.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makonew/int-cwiczenia.git"
+  },
+  "author": "Michał Paryż",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
