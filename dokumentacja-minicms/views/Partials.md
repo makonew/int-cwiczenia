@@ -1,0 +1,1 @@
+Jest to folder zawierający częsciowe elementy stron, takie jak Stopka czy Nagłówek.

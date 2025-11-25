@@ -1,0 +1,1 @@
+To entrypoint całej aplikacji.

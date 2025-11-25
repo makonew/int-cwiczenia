@@ -1,0 +1,1 @@
+Zawiera konfigurację serwera express.js i przypisaniem odpowiednich routerów i middlewarów.

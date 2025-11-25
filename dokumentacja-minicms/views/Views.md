@@ -1,0 +1,1 @@
+Jest to folder z template'ami do interfejsu w przeglądarce.
