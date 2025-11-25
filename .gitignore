@@ -1,2 +1,5 @@
-node_modules/
-.env
+**/node_modules/
+**/.obsidian/
+**/.env*
+.DS_Store
+*.log

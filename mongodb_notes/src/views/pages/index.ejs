@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notatki</title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+        <main>
+            <ul>
+                <% notes.forEach(note=> { %>
+                    <li>
+                        <b>
+                            <%= note.title %>
+                        </b> - <%= note.content %>
+                            <b>&nbsp;|&nbsp;</b>
+                            <form action="/changeStatus/<%= note._id %>" id="statusForm" method="POST"
+                                style="display: inline">
+                                <b>Status: </b><label for="submitBtn" style="cursor: pointer;">
+                                    <%= note.status %>
+                                </label></b>
+                                <button type="submit" id="submitBtn" style="display: none;"></button>
+                            </form>
+                            &nbsp;|&nbsp;
+                            <a href="/edit/<%= note._id %>">Edytuj</a>
+                            &nbsp;
+                            <form action="/delete/<%= note._id %>" method="POST" style="display: inline">
+                                <button>Usuń</button>
+                            </form>
+                    </li>
+                    <% }); %>
+            </ul>
+        </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>
