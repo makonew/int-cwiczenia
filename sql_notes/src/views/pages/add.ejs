@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dodaj notatkę</title>
+    </head>
+    <body>
+        <%- include('../partials/header') %>
+        <main>
+            <form action="/add" method="POST">
+                <fieldset>
+                    <legend>Dodaj nową notatkę</legend>
+                    <div>
+                        <label for="title">Tytuł:</label>
+                        <input type="text" id="title" name="title" required />
+                    </div>
+                    <br />
+                    <div>
+                        <label for="content">Treść:</label>
+                        <textarea type="text" id="content" name="content" required></textarea>
+                    </div>
+                    <br />
+                    <button type="submit">Dodaj notatkę</button>
+                </fieldset>
+            </form>
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Notatki</title>
+    </head>
+    <body>
+        <%- include('../partials/header') %>
+
+        <main>
+            <% if((notes || []).length === 0) {%>
+            <p>Brak zadań do wyświetlenia</p>
+            <%} else { %>
+            <div class="notes">
+                <% notes.forEach(note => { %>
+                <div class="note">
+                    <h2><%= note.title %> | Status: <%= note.done %></h2>
+                    <p><%= note.content %></p>
+                    <p>                        <input type="checkbox" name="done" id="done" <%
+                        nore.done ? "" : "checked" %> />
+
+                        <label for="done">Zadanie zakończone</label>
+                    </p>
+                    <button onclick="">Usuń zadanie</button>
+                </div>
+                <% }) %>
+            </div>
+            <% } %>
+        </main>
+
+        <%- include('../partials/footer') %>
+    </body>
+</html>

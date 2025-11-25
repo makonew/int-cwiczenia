@@ -1,0 +1,17 @@
+docker run --name mysql-notes 
+    -e MYSQL_ROOT_PASSWORD=root 
+    -e MYSQL_DATABASE=notes_app 
+    -p 3306:3306 
+    -d mysql:8.0 
+    --default-authentication-plugin=mysql_native_password
+
+docker exec -it mysql-notes mysql -uroot -proot
+
+use notes_app
+
+CREATE TABLE notes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
