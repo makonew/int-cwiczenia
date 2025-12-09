@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Add User</title>
+  </head>
+  <body>
+    <h1>Add User</h1>
+
+    <% if (typeof error === 'string') { %>
+      <p style="color: red;"><%= error %></p>
+    <% } %>
+
+    <form action="/add" method="post">
+      <div>
+        <label for="username">Username</label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          required
+          autocomplete="username"
+          value="<%= typeof username === 'string' ? username : '' %>"
+        />
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          required
+          autocomplete="new-password"
+        />
+      </div>
+
+            <div>
+        <label for="age">Age</label>
+        <input
+          id="age"
+          name="age"
+          type="number"
+          required
+        />
+      </div>
+
+      <button type="submit">Create</button>
+    </form>
+
+    <p><a href="/">Back</a></p>
+  </body>
+</html>
