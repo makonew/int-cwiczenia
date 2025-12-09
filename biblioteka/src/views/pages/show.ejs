@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+<main>
+<article>
+  <h1><%= book.title %></h1>
+  <p class="muted">Autor: <strong><%= book.author %></strong></p>
+  <p>Rok: <%= book.year || '—' %></p>
+  <p>Status: <%= book.status %></p>
+  <p style="white-space:pre-wrap"><%= book.description %></p>
+
+  <div class="actions" style="margin-top:12px">
+    <a href="/books/<%= book._id %>/edit">Edytuj</a>
+    <form class="inline" method="post" action="/books/<%= book._id %>?_method=DELETE">
+      <button type="submit" onclick="return confirm('Usunąć tę pozycję?')">Usuń</button>
+    </form>
+    <a href="/">Powrót</a>
+  </div>
+</article>
+</main>
+<%- include('partials/footer') %>
